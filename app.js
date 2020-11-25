@@ -15,7 +15,7 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 const store = new MongoDBStore({
-  uri :"mongodb://127.0.0.1:27017/ace-africa", 
+  uri :"mongodb+srv://Charity1818:fibreone18@cluster0.jjylv.mongodb.net/sarsmustend?retryWrites=true&w=majority", 
   collection : "sessions"
 }) 
 
@@ -53,7 +53,7 @@ app.use(function(req, res, next) {
 });
 
 const CONFIG = { 
-	uri : "mongodb://127.0.0.1:27017/ace-africa" , 
+	uri : "mongodb+srv://Charity1818:fibreone18@cluster0.jjylv.mongodb.net/sarsmustend?retryWrites=true&w=majority" , 
   OPTIONS : { 
     useNewUrlParser : true , 
     useCreateIndex : true , 
