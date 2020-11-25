@@ -1,0 +1,37 @@
+include includes/head.pug 
+block content 
+body(style="background:#fff") 
+  link(href="/css/style.css" rel="stylesheet")
+  main 
+    section(class="section-wrapper after-fixed-element m-b-5") 
+      div.framer 
+        if user
+          div.frame
+            div.fr-md-3 
+            div.fr-md-6.fr-12 
+              div.border-sorround-white.radius-5.m-b-1(style="border-radius:5px;border:2px solid #ccc;")
+                p.border-bottom.pad-10 #[i.fa.fa-link] Featured in #[strong Bigjara ] and 1 other publication 
+                div
+                  div.fr-md-12
+                    //- div(style="margin-right:20px;") 
+                    - let userBanner = `/users/${user.profile}`
+                    figure 
+                      img(src=userBanner class="w-100" alt="laugher")
+                    div.pad-10 
+                      h5  #{user.name}  
+                        p #{user.description}
+                      p 
+                        img(
+                          style="width:35px;height:35px;border-radius:50%;" 
+                          src=issueBanner 
+                          class="w-100" 
+                          alt="laugher"
+                        )
+                        span Charity Emeka
+            div.fr-md-3
+                  
+        else 
+          h2 This user does not exist
+                
+  include includes/footer.pug 
+  script(src="/js/easyframer.js") 

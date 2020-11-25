@@ -1,0 +1,36 @@
+ include includes/dashboard-head.pug  
+  main 
+    section(class="section-wrapper after-fixed-element m-b-5") 
+      div.framer 
+        if users.length > 0
+          div.frame 
+            each user  in users 
+              - let userBanner = `/users/${user.profile}` 
+            - let deleteUrl = `/users/${user.name}/delete` 
+              - let editUrl = `/users/${user.name}/update`
+              div.fr-md-4.fr-12.m-b-1
+                div.m-r-1(style="border-radius:5px;border:2px solid #ccc;padding-bottom:1rem;")
+                  figure
+                    img(src=userBanner alt=`Image depicting ${user.name}` class="w-100")
+                  div.center-text
+                    a(href=`/user/${user.name}`) #[h3 #{user.name}]
+                    p.m-b-2 #{user.description.substring(0 , 50)} ...
+                  //a(class="small-bot no-border no-outline bg-blue white-text m-r-1" href="#") #[i.fa.fa-eye]
+                  a(class="small-bot no-border no-outline bg-red white-text m-r-1" href=deleteUrl) #[i.fa.fa-trash] 
+                  a(class="small-bot no-border no-outline bg-green white-text m-r-1 modal-trigger" href="#") #[i.fa.fa-pencil] 
+                div(class="modal w-100 h-100  z-index-overall top-0 left-0  wrapper") 
+                  div(class="modal-content fr-md-6 center-box" data-modal-content-distance-from-top="5" data-modal-content-width="90") 
+                    span(class="close both-hover-with-focus") &times;
+                    form(class="pad-20 m-b-2 shadow bg-white bold-350 font-1 radius-5"  action=editUrl method="POST")
+                      if error 
+                        p #{error}
+                      label(for="category name" class="label") Full Name 
+                      input(type="text" class="input input-border-faint m-b-1 pad-10" name="fullName" id="fullName" value=user.name)  
+                      label(for="content" class="label") Message 
+                      textarea(class="content-area editor-style input no-margin"  name="message" contenteditable="true" id="message") #{user.description}
+                      input(type="submit" class="input input-border-faint m-b-1 pad-10 bg-red white-text radius-5" value="Update")
+        else 
+          h2 No user created yet
+                
+  include includes/footer.pug 
+  script(src="/js/easyframer.js") 

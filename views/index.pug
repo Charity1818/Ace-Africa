@@ -1,0 +1,167 @@
+include includes/header.pug
+block content
+  link(rel="stylesheet", href="/stylesheets/mainHome.css")
+  body 
+    include includes/navbar.pug
+    .margin
+      .container
+        .row
+          .col-md-6
+          .col-md-6
+            .text-right
+              h5.main-info.pt-5 Start Up
+                p.middle-text Helping you learn at your pace
+              button(class="btn btn-jumbo") Get Started With Us
+    section.mt-5
+      .container
+        div
+          p.welcome-text Welcome to Ace Africa
+          p.maintext.mt-3.mb-5 Mustapha Akanbi Library Hub is an open, serene and beautiful shared workspace for startups and entrepreneurs at lower cost than they would spend on space of their own. The hub gives small businesses and ambitious entrepreneurs the platform to work and pursue their goals in a revolutionary smart way.
+        .row 
+            .col-md-6
+                img(src="/images/draw.svg" class="about-image")
+            .col-md-6
+              h3.pt-3.about-text We create, build and develop softwares
+              ul
+                li 
+                  i(class="icon ion-ios-checkmark-outline")
+                  p.about-content Our Vision: To improve the ecosystem through the power of technology.
+                li 
+                  i(class="icon ion-ios-checkmark-outline")
+                  p.about-content Our Mission: To foster Nigeria's economic growth by providing job for the youths.
+                li 
+                  i(class="icon ion-ios-checkmark-outline")
+                  p.about-content Our Value: Inexpensive Workspace provision. Community Of Like-Minded Professionals. Programs & Activities for Developer. Job Creation. Cool Atmosphere. Collaboration. Dignity & Respect.
+
+    section.mt-5.bg-grey
+      .container
+        div
+          h6.text-services Our Services
+          p.text-help How we can help.
+        .row
+          .col-md-4
+            .card.card-height1
+              p.service-text.pl-5 Software 
+                br
+                | Development
+              a(href="#" class="learn pl-5") Learn more
+          .col-md-4
+            .card.card-height2
+              p.service-text.pl-5 Mobile app
+                br
+                | Development
+              a(href="#" class="learn pl-5") Learn more
+          .col-md-4
+            .card.card-height3 
+              p.service-text.pl-5 User eXperience
+                br
+                | Design
+              a(href="#" class="learn pl-5") Learn more
+    .section.p-t-3
+      .container
+        div
+          p.welcome-text Our Focus
+          p.text-center.social We focus on all SOCIAL ASPECT of the Nigeria economic particularly emphasizing on Job Creation.
+        .row.cards.p-t-2
+          .col-md-4.text-center
+            .cardx.p-t-3.box
+              i(class="fa fa-briefcase bag") 
+              p(class="font-25 bold-500") Co-Working Space
+              p We provide inexpensive workspace 
+                br
+                | where people meet, work, 
+                br
+                | network, share ideas and collaborate on projects 
+                br
+                | that can improve the ecosystem.
+          .col-md-4.text-center
+            .cardx.p-t-3.box
+              i(class="fa fa-picture-o bag") 
+              p(class="font-25 bold-500") Consulting
+              p We give solution to develop organizaion 
+                br
+                | both in commercial and private sector 
+                br
+                | level to improve their performance and 
+                br
+                | progresss.
+          .col-md-4.text-center
+            .cardx.p-t-3.box
+              i(class="fa fa-globe bag") 
+              p(class="font-25 bold-500") Ecosystem 
+                br
+                |Development
+              p We improve the economic status by 
+                br
+                | empowering youth, develop new 
+                br
+                | technologies, and expand job
+                br
+                | opportunities in the community.
+        .row.cards.m-t-8
+          .col-md-4.text-center
+            .cardx.p-t-3.box
+              i(class="fa fa-lightbulb-o bag") 
+              p(class="font-25 bold-500") Incubation
+              p We help new and startup companies to 
+                br
+                | develop by providing services such as 
+                br
+                | management training, co-creation work
+                br
+                | space and business support.
+          .col-md-4.text-center
+            .cardx.p-t-3.box
+              i(class="fa fa-tags bag") 
+              p(class="font-25 bold-500") Education
+              p We develop a productive network of tech 
+                br
+                | experts and young engineers who can 
+                br
+                | leverage on technolgy to solve local 
+                br
+                | challenges.
+          .col-md-4.text-center
+            .cardx.p-t-3.box
+              i(class="fa fa-laptop bag") 
+              p(class="font-25 bold-500") ICT Training
+              p We offer intensive ICT training on web 
+                br
+                | development, graphics design, UI/UX, 3D
+                br
+                | animation, robotics, office management
+                br
+                | and more.
+    .section.p-t-7.border-bottom-faint
+      .container
+        div
+          p.welcome-text Contact Us
+          p.text-center.social We focus on all SOCIAL ASPECT of the Nigeria economic particularly emphasizing on Job Creation.
+        .wrap
+          .wrap-md-5.m-t-3
+            p
+              i(class="fa map-marker tag") ADDRESS
+            p 36, Doyin-Omololu Street, Alapere Ikosi-Ketu, Lagos State.
+            p
+              i(class="fa fa-phone tag")  PHONE NUMBER 
+            p +234 81 4085 0141
+            p
+              i(class="fa fa-envelope")  EMAIL
+            p aceafrica.net
+          .wrap-md-7.m-t-3
+            form(class=""  method="POST")
+              if error 
+                p #{error}
+              input(type="text" class="input form-control input-border-faint m-b-1 pad-10" name="name" id="fullName" value="" placeholder="Full Name")  
+              label(for="content" class="input input-border-faint") 
+              input(type="text" class="input form-control input-border-faint m-b-1 pad-10" name="email" id="email" value="" placeholder="Email")
+              label(for="content" class="") 
+              input(type="text" class="input form-control input-border-faint m-b-1 pad-10" name="phone" id="phone number" value="" placeholder="Phone Number")
+              label(for="content" class="") 
+              textarea(class="content-area form-control"  name="message" contenteditable="true" id="Message" value="Message" placeholder="Message")
+              button(type="submit" class="botton text-right bg-yellow m-t-3 m-b-3") Submit
+
+script(src="/javascripts/jquery.min.js")
+script(src="/bootstrap/js/bootstrap.min.js")
+script(src="/javascripts/index.js")
+include includes/footer.pug 
