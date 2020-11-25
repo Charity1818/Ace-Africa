@@ -15,7 +15,7 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 const store = new MongoDBStore({
-  uri :"mongodb+srv://Charity1818:fibreone18@cluster0.jjylv.mongodb.net/sarsmustend?retryWrites=true&w=majority", 
+  uri :"mongodb+srv://Charity1818:fibreone18@cluster0.jjylv.mongodb.net/ace-africa?retryWrites=true&w=majority", 
   collection : "sessions"
 }) 
 
@@ -36,7 +36,7 @@ app.use(session({
 	cookie : {
 		maxAge : 864e5
 	} , 
-	secret : process.env.SESSION_SECRET ,   
+	secret : "hdofiffi",   
   resave : false , 
   store : store , 
 	saveUninitialized : true , 
@@ -53,7 +53,7 @@ app.use(function(req, res, next) {
 });
 
 const CONFIG = { 
-	uri : "mongodb+srv://Charity1818:fibreone18@cluster0.jjylv.mongodb.net/sarsmustend?retryWrites=true&w=majority" , 
+	uri : "mongodb+srv://Charity1818:fibreone18@cluster0.jjylv.mongodb.net/ace-africa?retryWrites=true&w=majority" , 
   OPTIONS : { 
     useNewUrlParser : true , 
     useCreateIndex : true , 
