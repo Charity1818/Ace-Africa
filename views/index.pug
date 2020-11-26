@@ -10,7 +10,8 @@ block content
           .col-md-6
             .text-right
               h5.main-info.pt-5 Start Up
-                p.middle-text Helping you learn at your pace
+                p.middle-text.d-md-hide.text-white Helping you learn at your pace
+                p.middle-text.d-sm-hide Helping you learn at your pace
               button(class="btn btn-jumbo") Get Started With Us
     section.mt-5
       .container
@@ -57,7 +58,82 @@ block content
                 br
                 | Design
               a(href="#" class="learn pl-5") Learn more
-    .section.p-t-3
+    .section.p-t-3.d-md-hide
+      .container
+        div
+          p.welcome-text.text-center Our Focus
+          p.text-center.social We focus on all SOCIAL ASPECT of the Nigeria economic particularly emphasizing on Job Creation.
+        .row.cards.p-t-2
+          .col-md-12.text-center
+            .cardx.p-t-3.box
+              i(class="fa fa-briefcase bag") 
+              p(class="font-25 bold-500") Co-Working Space
+              p We provide inexpensive workspace 
+                br
+                | where people meet, work, 
+                br
+                | network, share ideas and collaborate on projects 
+                br
+                | that can improve the ecosystem.
+          .col-md-12.text-center.m-t-2
+            .cardx.p-t-3.box
+              i(class="fa fa-picture-o bag") 
+              p(class="font-25 bold-500") Consulting
+              p We give solution to develop organizaion 
+                br
+                | both in commercial and private sector 
+                br
+                | level to improve their performance and 
+                br
+                | progresss.
+          .col-md-12.text-center.m-t-3
+            .cardx.p-t-3.box
+              i(class="fa fa-globe bag") 
+              p(class="font-25 bold-500") Ecosystem 
+                br
+                |Development
+              p We improve the economic status by 
+                br
+                | empowering youth, develop new 
+                br
+                | technologies, and expand job
+                br
+                | opportunities in the community.
+        .row.cards
+          .col-md-12.text-center.m-t-42
+            .cardx.p-t-3.box
+              i(class="fa fa-lightbulb-o bag") 
+              p(class="font-25 bold-500") Incubation
+              p We help new and startup companies to 
+                br
+                | develop by providing services such as 
+                br
+                | management training, co-creation work
+                br
+                | space and business support.
+          .col-md-12.text-center.m-t-3
+            .cardx.p-t-3.box
+              i(class="fa fa-tags bag") 
+              p(class="font-25 bold-500") Education
+              p We develop a productive network of tech 
+                br
+                | experts and young engineers who can 
+                br
+                | leverage on technolgy to solve local 
+                br
+                | challenges.
+          .col-md-12.text-center.m-t-3
+            .cardx.p-t-3.box
+              i(class="fa fa-laptop bag") 
+              p(class="font-25 bold-500") ICT Training
+              p We offer intensive ICT training on web 
+                br
+                | development, graphics design, UI/UX, 3D
+                br
+                | animation, robotics, office management
+                br
+                | and more.
+    .section.p-t-3.d-sm-hide
       .container
         div
           p.welcome-text Our Focus
@@ -132,10 +208,10 @@ block content
                 | animation, robotics, office management
                 br
                 | and more.
-    .section.p-t-7.border-bottom-faint
+    .section.p-t-7.border-bottom-faint.d-sm-hide
       .container
         div
-          p.welcome-text Contact Us
+          p.welcome-text.m-t-4 Contact Us
           p.text-center.social We focus on all SOCIAL ASPECT of the Nigeria economic particularly emphasizing on Job Creation.
         .wrap
           .wrap-md-5.m-t-3
@@ -160,6 +236,34 @@ block content
               label(for="content" class="") 
               textarea(class="content-area form-control"  name="message" contenteditable="true" id="Message" value="Message" placeholder="Message")
               button(type="submit" class="botton text-right bg-yellow m-t-3 m-b-3") Submit
+    .section.p-t-7.border-bottom-faint.d-md-hide.m-t-8
+      .container
+        div
+          p.welcome-text.m-t-70 Contact Us
+          p.text-center.social We focus on all SOCIAL ASPECT of the Nigeria economic particularly emphasizing on Job Creation.
+        .wrap
+          .wrap-md-12.m-t-2
+            p
+              i(class="fa map-marker tag") ADDRESS
+            p 36, Doyin-Omololu Street, Alapere Ikosi-Ketu, Lagos State.
+            p
+              i(class="fa fa-phone tag")  PHONE NUMBER 
+            p +234 81 4085 0141
+            p
+              i(class="fa fa-envelope")  EMAIL
+            p aceafrica.net
+          .wrap-md-12.m-t-2
+            form(class="w-150"  method="POST")
+              if error
+                p #{error}
+              input(type="text" class="input form-control input-border-faint m-b-1 pad-10" name="name" id="fullName" value="" placeholder="Full Name")  
+              label(for="content" class="input input-border-faint") 
+              input(type="text" class="input form-control input-border-faint m-b-1 pad-10" name="email" id="email" value="" placeholder="Email")
+              label(for="content" class="") 
+              input(type="text" class="input form-control input-border-faint m-b-1 pad-10" name="phone" id="phone number" value="" placeholder="Phone Number")
+              label(for="content" class="") 
+              textarea(class="content-area form-control"  name="message" contenteditable="true" id="Message" value="Message" placeholder="Message")
+              button(type="submit" class="bottons text-left bg-yellow m-t-3 m-r-5 m-b-3") Submit
 
 script(src="/javascripts/jquery.min.js")
 script(src="/bootstrap/js/bootstrap.min.js")

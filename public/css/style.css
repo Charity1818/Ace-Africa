@@ -669,6 +669,24 @@ header {
 .w-100 {
     width: 100%;
 }
+.w-100 {
+    width: 100%;
+}
+.w-110 {
+    width: 110%;
+}
+.w-120 {
+    width: 120%;
+}
+.w-130 {
+    width: 130%;
+}
+.w-140 {
+    width: 140%;
+}
+.w-150 {
+    width: 150%;
+}
 
 .d-inline {
     display: inline;
@@ -784,6 +802,11 @@ header {
     background: #ec5084;
     margin-left: 35rem;
 }
+.bottons {
+    padding: 10px 20px;
+    background: #ec5084;
+    margin-right: 35rem;
+}
 .bg-dark-blue{
     background: rgb(4, 4, 77);
 }
@@ -800,6 +823,12 @@ header {
 
 .text-center {
     text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
 }
 
 .dark-text {
@@ -1015,6 +1044,51 @@ header {
 }
 .m-t-10 {
     margin-top: 10rem;
+}
+.m-t-12 {
+    margin-top: 12rem;
+}
+.m-t-15{
+    margin-top: 15rem;
+}
+.m-t-20 {
+    margin-top: 20rem;
+}
+.m-t-22 {
+    margin-top: 22rem;
+}
+.m-t-25 {
+    margin-top: 25rem;
+}
+.m-t-30 {
+    margin-top: 30rem;
+}
+.m-t-35 {
+    margin-top: 35rem;
+}
+.m-t-40 {
+    margin-top: 40rem;
+}
+.m-t-42 {
+    margin-top: 42rem;
+}
+.m-t-45 {
+    margin-top: 45rem;
+}
+.m-t-50 {
+    margin-top: 50rem;
+}
+.m-t-60 {
+    margin-top: 60rem;
+}
+.m-t-70 {
+    margin-top: 70rem;
+}
+.m-t-80 {
+    margin-top: 80rem;
+}
+.m-t-90 {
+    margin-top: 90rem;
 }
 .m-l-1 {
     margin-left: 1rem;
@@ -1412,33 +1486,6 @@ header {
     .d-m-hide {
         display : none
     }
-    /* .img-edit {
-       width: 40%;
-    } */
-    /* .img-fluid1{
-        position: fixed;
-    }
-    .img-fluid2{
-        position: relative; 
-    }
-    .img-fluid2{
-        position: absolute;
-    } */
-    /* .logos{
-        height: 50px;
-        width: 50px;
-        display: flex;
-        flex-direction: row;
-    } */
-    /* .locations{
-        display: flex; */
-        /* flex-direction: column;
-        padding-left: 70rem;
-        margin-bottom: 80rem;
-    } */
-    /* .font-footer{
-        font-size: 10px;
-    } */
     .border-bottom-blue{
         border-bottom-color: blue;
     }
